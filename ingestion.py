@@ -33,7 +33,7 @@ def merge_multiple_dataframe(input_folder_path, output_folder_path):
         filenames.append(filename)
 
     concat_data = pd.concat(data).drop_duplicates().reset_index(drop=True)
-    concat_data.to_csv(f'{output_folder_path}/finaldata.csv')
+    concat_data.to_csv(f'{output_folder_path}/finaldata.csv', index=False)
 
     # save a data ingestion record
 
