@@ -23,6 +23,6 @@ responses = [response1, response2, response3, response4]
 
 with open(f'{model_path}/apireturns.txt','w') as file:
     for response in responses:
-         file.write(str(response))
+        file.write(str(response))
 
 
