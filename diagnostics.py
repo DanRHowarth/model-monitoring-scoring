@@ -61,6 +61,7 @@ def outdated_packages_list():
     requirements = subprocess.check_output(['pip', 'list', '--outdated'])
     with open('outdated.txt', 'wb') as f:
         f.write(requirements)
+    return requirements
 
 ### check for missing data
 

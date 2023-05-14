@@ -46,11 +46,11 @@ def summary_stats():
 #######################Diagnostics Endpoint
 @app.route("/diagnostics", methods=['GET','OPTIONS'])
 def diagnostics():
-    execution_time()
-    outdated_packages_list()
-    check_missing_data(dataset_csv_path)
-
-    return 'diagnostics run and saved in repo'
+    time = execution_time()
+    packages = outdated_packages_list()
+    data = check_missing_data(dataset_csv_path)
+    diagnostics = [str(time), str(packages), str(data)]
+    return diagnostics
 
 if __name__ == "__main__":
     #app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
