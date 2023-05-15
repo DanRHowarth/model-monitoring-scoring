@@ -49,8 +49,9 @@ def diagnostics():
     time = execution_time()
     packages = outdated_packages_list()
     data = check_missing_data(dataset_csv_path)
-    diagnostics = [str(time), str(packages), str(data)]
-    return diagnostics
+
+    # output = {'execution_time': time, 'outdated_packages': packages, 'missing_data': data}
+    return str(time) + str(packages) + str(data)
 
 if __name__ == "__main__":
     #app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
